@@ -1,12 +1,14 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
+
+import HeaderList from './components/HeaderList';
 
 function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+    return (
+        <div className='App'>
+            <HeaderList></HeaderList>
+        </div>
+    );
 }
 
 export default App;
