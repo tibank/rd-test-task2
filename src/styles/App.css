@@ -1,4 +1,7 @@
 @import url('./normalize.css');
+@import url('./HeaderList.css');
+@import url('./NoteItem.css');
+@import url('./HeaderCategories.css');
 
 body {
     font-family: 'Roboto', sans-serif;
