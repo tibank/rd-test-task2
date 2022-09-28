@@ -3,17 +3,15 @@ import { Note } from '../models/Note';
 
 type BlockButtonsProps = {
   note: Note;
+  archivedNote: (note: Note) => void;
+  removeNote: (note: Note) => void;
 };
 
 function editNote(note: Note): void {
   console.log(note);
 }
 
-function deleteNote(note: Note): void {}
-
-function archivedNote(note: Note): void {}
-
-const BlockButtonsNoteItem: FC<BlockButtonsProps> = ({ note }) => {
+const BlockButtonsNoteItem: FC<BlockButtonsProps> = ({ note, archivedNote, removeNote }) => {
   return (
     <div className='note-buttons buttons-column'>
       <div onClick={() => editNote(note)} className='note-button-item' data-btn='edit'>
@@ -22,8 +20,8 @@ const BlockButtonsNoteItem: FC<BlockButtonsProps> = ({ note }) => {
       <div onClick={() => archivedNote(note)} className='note-button-item' data-btn='archived'>
         <i onClick={() => archivedNote(note)} className='fas fa-caret-square-down fa-lg'></i>
       </div>
-      <div onClick={() => deleteNote(note)} className='note-button-item' data-btn='remove'>
-        <i onClick={() => deleteNote(note)} className='fas fa-trash fa-lg'></i>
+      <div onClick={() => removeNote(note)} className='note-button-item' data-btn='remove'>
+        <i onClick={() => removeNote(note)} className='fas fa-trash fa-lg'></i>
       </div>
     </div>
   );

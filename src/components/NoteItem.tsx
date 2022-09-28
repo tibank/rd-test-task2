@@ -5,9 +5,11 @@ import BlockButtonsNoteItem from './BlockButtonsNoteItem';
 
 type NoteItemProps = {
   note: Note;
+  archivedNote: (note: Note) => void;
+  removeNote: (note: Note) => void;
 };
 
-const NoteItem: FC<NoteItemProps> = ({ note }) => {
+const NoteItem: FC<NoteItemProps> = ({ note, archivedNote, removeNote }) => {
   const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' };
   return (
     <div className='list-notes__row'>
@@ -16,7 +18,7 @@ const NoteItem: FC<NoteItemProps> = ({ note }) => {
       <div className='data-column'>{note.category.name}</div>
       <div className='data-column truncate'>{note.content}</div>
       <div className='data-column truncate'>{getStringDates(note.content)}</div>
-      <BlockButtonsNoteItem note={note} />
+      <BlockButtonsNoteItem note={note} archivedNote={archivedNote} removeNote={removeNote} />
     </div>
   );
 };
