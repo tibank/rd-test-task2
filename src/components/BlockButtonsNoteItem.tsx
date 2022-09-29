@@ -3,15 +3,12 @@ import { Note } from '../models/Note';
 
 type BlockButtonsProps = {
   note: Note;
+  editNote: (note: Note) => void;
   archivedNote: (note: Note) => void;
   removeNote: (note: Note) => void;
 };
 
-function editNote(note: Note): void {
-  console.log(note);
-}
-
-const BlockButtonsNoteItem: FC<BlockButtonsProps> = ({ note, archivedNote, removeNote }) => {
+const BlockButtonsNoteItem: FC<BlockButtonsProps> = ({ note, editNote, archivedNote, removeNote }) => {
   return (
     <div className='note-buttons buttons-column'>
       <div onClick={() => editNote(note)} className='note-button-item' data-btn='edit'>

@@ -1,0 +1,28 @@
+.modal-note__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-note__layer.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-note__content {
+  position: relative;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  height: 60%;
+  min-height: 500px;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}

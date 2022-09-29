@@ -2,7 +2,9 @@
 @import url('./HeaderList.css');
 @import url('./NoteItem.css');
 @import url('./HeaderCategories.css');
+@import url('./NoteForm.css');
+@import url('./ModalLayer.css');
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
