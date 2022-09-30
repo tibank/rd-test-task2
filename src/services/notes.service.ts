@@ -17,11 +17,9 @@ export class NotesService {
     return this.dataStore.notes;
   }
 
-  findOne(id: number): Note | null {
+  findOne(id: number): Note | undefined {
     const note = this.dataStore.notes.find((element) => element.id === id);
-    if (!note) {
-      throw new Error('Not found note by id: ' + id);
-    }
+
     return note;
   }
 
@@ -54,7 +52,7 @@ export class NotesService {
     this.dataStore.notes = result;
   }
 
-  getStat() {
+  getStat(): StatNotes[] {
     const mapCategories = new Map<Category, StatNotes>();
 
     for (let i = 0; i < this.dataStore.notes.length; i++) {
@@ -73,12 +71,22 @@ export class NotesService {
     return result;
   }
 
-  getNewNoteId() {
+  getNewNoteId(): number {
     if (!this.dataStore.notes.length) {
       return 1;
     }
     this.dataStore.notes.sort((a, b) => a.id - b.id);
 
     return this.dataStore.notes[this.dataStore.notes.length - 1].id + 1;
+  }
+
+  findAllCategories(): Category[] {
+    return this.dataStore.categories;
+  }
+
+  findCategoryOne(id: number): Category | undefined {
+    const category = this.dataStore.categories.find((element) => element.id === id);
+
+    return category;
   }
 }

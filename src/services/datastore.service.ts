@@ -8,8 +8,8 @@ export class DatastoreService {
   public notes: Note[];
 
   constructor() {
-    this.notes = this.loadNotes();
     this.categories = this.loadCategories();
+    this.notes = this.loadNotes();
   }
 
   loadCategories(): Category[] {
@@ -17,6 +17,12 @@ export class DatastoreService {
   }
 
   loadNotes(): Note[] {
+    notesMocked.forEach((elem) => {
+      const category = this.categories.find((x) => x.id === elem.category.id);
+      if (category) {
+        elem.category = category;
+      }
+    });
     return notesMocked;
   }
 }
