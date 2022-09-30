@@ -1,0 +1,12 @@
+@import url('./normalize.css');
+@import url('./HeaderList.css');
+@import url('./NoteItem.css');
+@import url('./HeaderCategories.css');
+@import url('./NoteForm.css');
+@import url('./ModalLayer.css');
+@import url('./CreateButton.css');
+@import url('./CategoryItem.css');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,43 @@
+.list-notes__header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.notes-header {
+    background: darkgrey;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.header {
+    padding: 10px 0px;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+}
+
+.header-button-item {
+    padding: 0px 10px;
+}
+
+.data-column {
+    flex: 0 0 17%;
+    text-align: left;
+}
+
+.data-column:first-child {
+    margin: 0 0 0 5%;
+}
+
+.data-column:nth-child(5) {
+    margin: 0 0 0 2%;
+}
+
+.buttons-column {
+    flex: 0 0 10%;
+}

@@ -1,0 +1,14 @@
+.categories-notes__header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.column-category-name {
+    flex: 0 0 25%;
+    text-align: left;
+}
+
+.column-category-active, .column-category-archived {
+    flex: 0 0 15%;
+    text-align: center;
+}
