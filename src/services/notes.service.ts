@@ -38,7 +38,7 @@ export class NotesService {
     const index: number = this.dataStore.notes.findIndex((element: Note) => element.id === id);
 
     if (index === -1) {
-      throw new Error('Not found note by id: ' + id);
+      return;
     }
 
     let result: Note[];

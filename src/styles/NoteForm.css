@@ -71,10 +71,10 @@ option[selected] {
   width: 20%;
 }
 
-.item-note_btn {
+.item-note__btn {
   padding: 10px 15px;
   font-size: 1.1rem;
   border: 1px solid black;
   border-radius: 5px;
-  width: 100px
+  width: 100px;
 }

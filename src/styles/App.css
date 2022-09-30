@@ -5,6 +5,7 @@
 @import url('./NoteForm.css');
 @import url('./ModalLayer.css');
 @import url('./CreateButton.css');
+@import url('./CategoryItem.css');
 
 body {
   font-family: 'Roboto', sans-serif;

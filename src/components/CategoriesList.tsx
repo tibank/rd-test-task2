@@ -1,12 +1,19 @@
 import React, { FC } from 'react';
+import { StatNotes } from '../models/statCategories';
+import CategoryItem from './CategoryItem';
 import HeaderCategories from './HeaderCategories';
 
-const CategoriesList: FC = () => {
-  //const [notes, setNotes] = useState<Note[]>(notesService.findAll());
+type CategoryListProps = {
+  statNote: StatNotes[];
+};
 
+const CategoriesList: FC<CategoryListProps> = ({ statNote }) => {
   return (
     <div>
       <HeaderCategories />
+      {statNote.map((stat: StatNotes, index: number) => (
+        <CategoryItem key={index} stat={stat} />
+      ))}
     </div>
   );
 };

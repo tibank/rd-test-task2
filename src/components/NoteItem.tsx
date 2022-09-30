@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
+import React, { Dispatch, FC, SetStateAction } from 'react';
 import { getStringDates } from '../helpers/getStringDates';
 import { Note } from '../models/Note';
+import { StatNotes } from '../models/statCategories';
 import BlockButtonsNoteItem from './BlockButtonsNoteItem';
 
 type NoteItemProps = {
@@ -8,9 +9,10 @@ type NoteItemProps = {
   editNote: (note: Note) => void;
   archivedNote: (note: Note) => void;
   removeNote: (note: Note) => void;
+  setStatNotes: Dispatch<SetStateAction<StatNotes[]>>;
 };
 
-const NoteItem: FC<NoteItemProps> = ({ note, editNote, archivedNote, removeNote }) => {
+const NoteItem: FC<NoteItemProps> = ({ note, editNote, archivedNote, removeNote, setStatNotes }) => {
   const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' };
   return (
     <div className='list-notes__row'>
