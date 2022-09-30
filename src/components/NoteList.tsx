@@ -48,25 +48,16 @@ const NoteList: FC<NoteListProps> = ({ notesService, setStatNotes }) => {
   }
 
   function editNote(note: Note): void {
-    console.log(note);
-    console.log(note.name);
-    console.log(notesService.findAll());
     setSelectedNote(note);
     setVisible(true);
   }
 
   function archivedNote(note: Note): void {
-    console.log(note);
-    console.log(note.name);
-    console.log(notesService.findAll());
     note.archived = true;
     updateNote(note);
   }
 
   function removeNote(note: Note): void {
-    console.log(note);
-    console.log(note.name);
-    console.log(notesService.findAll());
     notesService.remove(note.id);
     refreshLists();
   }
